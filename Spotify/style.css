@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(22, 22, 39);
+    color: white;
+}
+
+header, .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+}
+
+.r-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.icon-input {
+    background-color: rgb(165, 202, 204);
+    padding: 10px 35px 10px 15px; 
+    border-radius: 3px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    width: 200px; 
+    padding-left: 40px;
+    color: #FFFFFF;
+    
+}
+
+.icon-input::placeholder {
+    color: #FFFFFF; 
+}
+
+.glass {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.microphone-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.bell {
+    font-size: 30px;
+}
+
+.profile {
+    font-size: 30px;
+    margin-right: 20px;
+}
+
