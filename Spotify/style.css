@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: cursive;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,16 +7,23 @@ body {
     color: white;
 }
 
+body::-webkit-scrollbar {
+    display: none; 
+}
+
 header, .head {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    gap: 10px;
+    padding: 10px 20px;
+    margin-top: -10px;
 }
 
 header .logo {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 img {
@@ -27,7 +34,18 @@ img {
 .r-nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 724px) {
+    header, .head {
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+
+    header .logo {
+        margin-bottom: -35px; 
+    }
 }
 
 .search {
@@ -78,3 +96,236 @@ img {
     margin-right: 20px;
 }
 
+main {
+    /* width: 100%; */
+    height: calc(100vh - 99px);
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-areas: "main right";
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        grid-template-columns: 5fr 2fr;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.main {
+    grid-area: main;
+    overflow-y: auto; 
+}
+.main::-webkit-scrollbar {
+    display: none; 
+}
+
+
+.main-img {
+    margin: 10px 0;
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 10px;
+}
+
+.main-img img {
+    flex: 1;
+    height: auto;
+    max-width: 100%;
+    transition: transform 0.2s ease-in-out;
+    border: 2px solid black;
+}
+
+.main-img img:hover {
+    transform: scale(0.9);
+}
+
+.release {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.r-right, .r-left {
+    width: 50%;
+}
+
+.rbox {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ri {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    /* justify-content: space-between; */
+    align-items: center;
+    
+}
+
+.ri div {
+    margin-left: 10px;
+}
+
+.ri img {
+    height: 80px;
+    width: 100px;
+}
+
+.artists {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    gap: 13px;
+}
+
+.artists::-webkit-scrollbar {
+    display: none; 
+}
+
+.artists img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+}
+
+.english {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.english::-webkit-scrollbar {
+    display: none; 
+}
+
+.ebox img {
+    height: 130px;
+    width: 130px;
+}
+
+.ebox div h3 {
+    font-weight: 100;
+}
+
+.music {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    gap: 10px;
+}    
+
+.music div img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    display: block;
+}
+
+.cen {
+    position: relative;
+    height: 83%;
+    top: 40px;
+    /* margin-bottom: -0px; */
+}
+
+
+.cen .overlay {
+    position: absolute;
+    top: 13%;
+    left: 25%;
+}
+
+.r-cen {
+    overflow-x: auto;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    margin-top: 75px;
+}
+
+.r-cen::-webkit-scrollbar {
+    display: none; 
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.right {
+    grid-area: right;
+    border-left: 1px solid white;
+    overflow-y: auto; 
+    max-height: calc(100vh - 99px);
+}
+
+.right::-webkit-scrollbar {
+    display: none; 
+}
+
+.head2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head2 h1 {
+    margin-left: 5px;
+}
+.head2 h3 {
+    color: aqua;
+    cursor: pointer;
+}
+
+.boxes .box {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-around;
+   
+} 
+
+.box img {
+    width: 70px;
+    height: 70px;
+}
+
+.name {
+    height: 100px;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name h3 {
+    font-family:'Courier New', Courier, monospace;
+}
+
+.name h4 {
+    margin-top: -15px;
+    font-size: 15px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 5;
+}
+
+.box i, img{
+    cursor: pointer;
+}
