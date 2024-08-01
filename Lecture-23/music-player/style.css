@@ -1,46 +1,126 @@
-*{
-    padding:0;
+* {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-button{
-    border: none;
-    background: none;
-}
-#progress{
-    cursor: pointer;
-}
-i{
-    font-size: 1.6rem;
-}
-#container{
-    position: relative;
-    border: 2px solid black;
-    width: 360px;
-    height: 400px;
-    margin: 30px auto;
-    text-align: center;
-}
-#play-section{
-    padding: 20px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: space-around;
-    /* flex-direction: roe; */
-}
-#play-section > div{
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
+    font-family: 'Arial', sans-serif;
 }
 
-.song-item{
-    border: 1px solid black;
-    pad: 5px;
-    margin: 5px auto;
-    width: 70%;
+body {
+    background: linear-gradient(to bottom, #ff9966, #ff5e62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    position: relative;
+    border: 2px solid #333;
+    width: 360px;
+    height: 450px;
+    margin: 30px auto;
+    text-align: center;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+#song-list {
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.song-item {
+    border: 1px solid #333;
+    padding: 10px;
+    margin: 10px auto;
+    width: 90%;
     border-radius: 10px;
     list-style: none;
+    background: #f1f1f1;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.song-item:hover {
+    background: #ddd;
+}
+
+#play-section {
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    margin-left: -21px;
+}
+
+#progress {
+    cursor: pointer;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#play-section > div {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+i {
+    font-size: 1.8rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+button:hover i {
+    color: #ff5e62;
+}
+
+button:active i {
+    color: #ff9966;
+}
+
+#time-info {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 10px auto;
+    font-size: 14px;
+    color: #333;
+}
+
+#current-time,
+#duration {
+    font-family: monospace;
 }

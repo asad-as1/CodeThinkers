@@ -11,20 +11,22 @@
     
     <section id="container">
         <h1>MUSIC PLAYER</h1>
-        <ul id="song-list">
-
-        </ul>
-
+        <ul id="song-list"></ul>
+    
         <div id="play-section">
             <input type="range" id="progress">
-            <div>  
-                <button><i class="fa-solid fa-backward"></i></button>
+            <div id="time-info">
+                <span id="current-time">00:00</span>
+                <span id="duration">00:00</span>
+            </div>
+            <div>
+                <button><i class="fa-solid fa-backward back"></i></button>
                 <button id="play-btn"><i class="fa-solid fa-play"></i></button>
-                <button><i class="fa-solid fa-forward"></i></button>
+                <button><i class="fa-solid fa-forward for"></i></button>
             </div>
         </div>
-
     </section>
+    
 
 
     <script src="app.js"></script>
