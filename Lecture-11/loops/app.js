@@ -17,7 +17,7 @@
 // }
 
 // 5 -> for , while , do-while , 
-//for-of => array
+//for-of => array, for-in => array as idx, for(let idx in arr) { arr[idx] };
 //for-in => object
 
 // array => ds => heterogenous => collection of data
